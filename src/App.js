@@ -33,7 +33,7 @@ function App() {
           placeholder="Search..."
       />
       
-      <AddToDo />
+      <AddToDo value={listTodo} />
       {
         listTodo?.map((item, index) => (
           <Todo value={item} key={index} />

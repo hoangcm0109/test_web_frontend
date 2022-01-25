@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { addTodo, updateTodo } from '../../redux/TodoSlice';
 import { changePiority } from '../../redux/SearchSlice';
 
-const AddToDo = ({ onClose, value, setDetail }) => {
+const AddToDo = ({ onClose, value }) => {
 
     const [todo, setTodo] = useState('')
     const [desc, setDesc] = useState('')
@@ -16,7 +16,7 @@ const AddToDo = ({ onClose, value, setDetail }) => {
 
     const dispatch = useDispatch()
 
-    const handleAdd = () => {
+    const handleAdd = (idUpdate) => {
         const newTodo = {
             id: uuidv4(),
             todo,
@@ -28,15 +28,15 @@ const AddToDo = ({ onClose, value, setDetail }) => {
         if (todo === '' && desc === '') {
             alert('Chưa nhập dữ liệu')
         } else if(onClose) {
-            dispatch(updateTodo(newTodo))
+            dispatch(updateTodo({
+                idUpdate,
+                ...newTodo
+            }))
         } else {
             dispatch(addTodo(newTodo))
         }
         setTodo('')
         setDesc('')
-        
-
-        
     }
 
     const handlePiority = (e) => {
@@ -67,7 +67,7 @@ const AddToDo = ({ onClose, value, setDetail }) => {
                 </select>
             </div>
         </div>
-        <button className='btn' onClick={handleAdd}>{onClose ? 'Update' : 'Add'}</button>
+        <button className='btn' onClick={() => handleAdd(value.id)}>{onClose ? 'Update' : 'Add'}</button>
     </div>;
 };
 

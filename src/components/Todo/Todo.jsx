@@ -24,7 +24,6 @@ const Todo = ({ value }) => {
 
   const handleDetail = () => {
     setOpenModal(!openModal);
-    // dispatch(setTodoList)
   };
 
   
@@ -57,7 +56,7 @@ const Todo = ({ value }) => {
         </div>
       </div>
       {openModal && (
-        <AddToDo onClose={openModal} value={value} setDetail={handleDetail} />
+        <AddToDo onClose={openModal} value={value} />
       )}
     </>
   );

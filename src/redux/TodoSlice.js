@@ -31,10 +31,12 @@ const todoSlice = createSlice({
         },
         updateTodo: (state, action) => {
             state.map(todo => {
-                todo.todo = action.payload.todo
-                todo.desc = action.payload.desc
-                todo.date = action.payload.date
-                todo.piority = action.payload.piority
+                if(todo.id === action.payload.idUpdate) {
+                    todo.todo = action.payload.todo
+                    todo.desc = action.payload.desc
+                    todo.date = action.payload.date
+                    todo.piority = action.payload.piority
+                }
             })
         }
     }
