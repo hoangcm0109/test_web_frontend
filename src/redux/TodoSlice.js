@@ -37,7 +37,9 @@ const todoSlice = createSlice({
                     todo.date = action.payload.date
                     todo.piority = action.payload.piority
                 }
+                return todo
             })
+            localStorage.setItem('todoList', JSON.stringify(sortByDate([...state])))
         }
     }
 
