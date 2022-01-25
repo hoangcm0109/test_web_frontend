@@ -1,0 +1,42 @@
+.todo {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 2px solid lightgreen;
+
+    &-title {
+        display: flex;
+        align-items: center;
+
+        input {
+            width: 20px;
+            height: 20px;
+            display: block;
+            padding: 60px;
+        }
+
+        .title {
+            margin-left: 10px;
+        }
+    }
+
+    &-btn > * {
+        padding: 10px 15px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+
+    }
+    .detail {
+        background-color: #00bcd5;
+    }
+
+    .remove {
+        background-color: #d9544f;
+    }
+}
+

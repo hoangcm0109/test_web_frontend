@@ -1,0 +1,32 @@
+.handle-complete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 5px;
+
+    &_title {
+        font-weight: bold;
+        margin-left: 15px;
+    }
+
+    &_btn > * {
+        padding: 10px 15px;
+        margin: 0 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        color: white;
+
+    }
+    .done {
+        background-color: #2196f3;
+    }
+
+    .remove {
+        background-color: #d9544f;
+    }
+}

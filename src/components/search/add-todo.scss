@@ -1,0 +1,72 @@
+.add-todo {
+    // overflow: hidden;
+    &_form {
+        margin-bottom: 20px;
+
+        label {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .input-todo {
+            display: block;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #b3b3b3;
+            border-radius: 3px;
+            outline: none;
+    
+            &:hover {
+                border-color: #1d2dbf;
+            }
+        }
+
+        .input-area {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            outline: none;
+        }
+    }
+
+    &_filter {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .input-date {
+            padding: 5px 10px;
+        }
+
+        .group-date {
+            label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            .select {
+                padding: 5px 10px;
+                padding-right: 50px;
+            }
+        }
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px 0;
+        font-weight: bold;
+        border: none;
+        outline: none;
+        background-color: #5bb85d;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all .5s ease;
+
+        &:hover {
+            background-color: #377438;
+        }
+    }
+}
